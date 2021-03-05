@@ -1,0 +1,2 @@
+defrag c: -a
+pause
