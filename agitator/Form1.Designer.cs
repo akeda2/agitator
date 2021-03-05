@@ -43,6 +43,7 @@ namespace agitator
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -52,7 +53,6 @@ namespace agitator
             this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -126,7 +126,7 @@ namespace agitator
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Location = new System.Drawing.Point(76, 299);
+            this.button5.Location = new System.Drawing.Point(73, 298);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(63, 24);
             this.button5.TabIndex = 9;
@@ -218,6 +218,17 @@ namespace agitator
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Right -";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(51, 79);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(75, 17);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "interactive";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -263,7 +274,7 @@ namespace agitator
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(490, 21);
+            this.button8.Location = new System.Drawing.Point(484, 21);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(43, 23);
             this.button8.TabIndex = 0;
@@ -283,7 +294,7 @@ namespace agitator
             // button7
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button7.Location = new System.Drawing.Point(12, 299);
+            this.button7.Location = new System.Drawing.Point(15, 298);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(55, 24);
             this.button7.TabIndex = 22;
@@ -310,17 +321,6 @@ namespace agitator
             this.button3.Text = "info";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(51, 79);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(75, 17);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "interactive";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 

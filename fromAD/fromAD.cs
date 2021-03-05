@@ -45,7 +45,7 @@ namespace fromAD
             int e = 0;
             foreach (SearchResult resEnt in mySearcher.FindAll())
             {
-                Entries;
+                _ = Entries;
                 Entries[e] = resEnt.GetDirectoryEntry().Name.TrimStart(charsToTrim.ToCharArray()).ToString();
                 e++;
                 //Console.WriteLine(resEnt.GetDirectoryEntry().Name.TrimStart(charsToTrim.ToCharArray()).ToString());
