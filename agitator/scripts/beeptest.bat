@@ -1,0 +1,1 @@
+PowerShell -NoProfile -ExecutionPolicy Bypass -command "&{Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show("""Din windowsversion är för gammal. Vad god kontakta oss för uppdatering!""","""Meddelande från Support Malmö""")}"

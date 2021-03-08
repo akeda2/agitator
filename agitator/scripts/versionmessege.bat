@@ -1,0 +1,2 @@
+PowerShell -NoProfile -ExecutionPolicy Bypass -command "&{if ((Get-ItemProperty """HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion""").ReleaseId) < 1909); {Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show("""Din windowsversion är för gammal. Vad god kontakta oss för uppdatering!""","""Meddelande från Support Malmö""")}}"
+pause

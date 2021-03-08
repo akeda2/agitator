@@ -2,7 +2,7 @@
 # 2007-sep-18 17:55:44
 
 Name agitator
-
+Unicode True
 SetCompressor lzma
 
 # Defines

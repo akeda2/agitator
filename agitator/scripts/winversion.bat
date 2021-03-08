@@ -1,0 +1,2 @@
+PowerShell -NoProfile -ExecutionPolicy Bypass -command "&{(Get-ItemProperty """HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion""").ReleaseId}"
+PowerShell -NoProfile -ExecutionPolicy Bypass -command "&{Read-Host -Prompt """Press any key to continue"""}"
