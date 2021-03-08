@@ -7,7 +7,7 @@ SetCompressor lzma
 
 # Defines
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 2.5
+!define VERSION 2.6
 !define COMPANY "akeda"
 !define URL "http://sourceforge.net/agitator"
 
@@ -17,6 +17,10 @@ SetCompressor lzma
 # Included files
 !include Sections.nsh
 !include MUI.nsh
+
+#Test date-format
+!define /date MyTIMESTAMP "%Y-%m-%d"
+
 
 # Variables
 Var StartMenuGroup
@@ -35,7 +39,7 @@ LicenseData ".\bin\Release\gpl.txt"
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile .\bin\agitator-setup.exe
+OutFile .\bin\agitator-setup_${MyTIMESTAMP}.exe
 #InstallDir $PROGRAMFILES\agitator
 InstallDir $PROFILE\agitator
 
