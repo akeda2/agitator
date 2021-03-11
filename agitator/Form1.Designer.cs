@@ -53,6 +53,9 @@ namespace agitator
             this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -116,7 +119,7 @@ namespace agitator
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(227, 298);
+            this.button4.Location = new System.Drawing.Point(216, 298);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(69, 24);
             this.button4.TabIndex = 8;
@@ -323,6 +326,36 @@ namespace agitator
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(291, 298);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(47, 23);
+            this.button9.TabIndex = 25;
+            this.button9.Text = "clear";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(380, 34);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(64, 23);
+            this.button10.TabIndex = 26;
+            this.button10.Text = "uncheck";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(326, 34);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(48, 23);
+            this.button11.TabIndex = 27;
+            this.button11.Text = "check";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.button2;
@@ -330,6 +363,9 @@ namespace agitator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(729, 391);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button7);
@@ -386,6 +422,9 @@ namespace agitator
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }
 

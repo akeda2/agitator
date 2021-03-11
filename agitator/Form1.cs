@@ -175,5 +175,20 @@ namespace agitator
                 //checkedListBox1.Items.Add(file);
                 checkedListBox1.Items.AddRange(agitator.FillCombo(file));
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            checkedListBox1.Items.Clear();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            checkedListBox1.UncheckAllItems();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            checkedListBox1.CheckAllItems();
+        }
     }
 }
