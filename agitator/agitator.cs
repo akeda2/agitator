@@ -88,6 +88,14 @@ namespace agitator
             Saver.WriteLine(StringToCut);
             Saver.Close();
         }
+        public static string[] ItemsFromSeparators(string list)
+        {
+            string[] separatedList = list.Split(
+                new[] { "\r\n", "\r", "\n", "," },
+                StringSplitOptions.None
+                );
+            return separatedList;
+        }
 
         public class Agitator
         {

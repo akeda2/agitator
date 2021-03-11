@@ -10,7 +10,7 @@ namespace testADextract
     {
         static void Main(string[] args)
         {
-            fromAD.machineExtractor myExtract = new machineExtractor("SR");
+            fromAD.machineExtractor myExtract = new machineExtractor(System.Environment.UserDomainName);
             foreach(string entry in myExtract.GetEntries()){ 
             Console.Write(entry);
             }

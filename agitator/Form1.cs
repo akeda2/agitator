@@ -65,7 +65,7 @@ namespace agitator
             agitator.Agitator RunThis = new agitator.Agitator();
             //string[] machines = checkedListBox1.SelectedItems.ToString().Split('\n');
             //string[] machines = checkedListBox1.CheckedItems.ToString().Split('\n');
-            
+
             //string[] scripts = checkedListBox2.SelectedItems.ToString().Split('\n');
             //string[] scripts = checkedListBox2.CheckedItems.ToString().Split('\n');
             //agitator.Agitator.Stone myStone = new agitator.Agitator.Stone(machines,scripts);
@@ -73,14 +73,23 @@ namespace agitator
 
             //for(int p = 0; p < checkedListBox1.SelectedItems.Count; p++)
 
-            
+
             ///static obj-to-string
+
             string[] machines = new string[checkedListBox1.CheckedItems.Count];
 
             for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++ )
             {
                 machines[i] = checkedListBox1.CheckedItems[i] as string;
             }
+
+            string machinesJoined = string.Join(",", machines);
+            
+            string[] machinesSplitted = machinesJoined.Split(
+                new[] { "\r\n", "\r", "\n", "," },
+                StringSplitOptions.None
+                );
+
             string[] scripts = new string[checkedListBox2.CheckedItems.Count];
             for (int i = 0; i < checkedListBox2.CheckedItems.Count; i++)
             {
@@ -96,7 +105,7 @@ namespace agitator
             //RunThis.PathToPsexec = ".\\psexec.exe"; //old default
             RunThis.Delay = (Convert.ToInt32(numericUpDown1.Value) * 1000);
             RunThis.PathToPsexec = this.textBox1.Text + @"\psexec.exe";
-            RunThis.ExecuteThis(machines, scripts);
+            RunThis.ExecuteThis(machinesSplitted, scripts);
 
             //RunThis.ExecuteThis(checkedListBox1.CheckedItems, checkedListBox2.CheckedItems);
 
