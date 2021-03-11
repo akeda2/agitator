@@ -94,6 +94,7 @@ namespace agitator
             }
 
             //RunThis.PathToPsexec = ".\\psexec.exe"; //old default
+            RunThis.Delay = (Convert.ToInt32(numericUpDown1.Value) * 1000);
             RunThis.PathToPsexec = this.textBox1.Text + @"\psexec.exe";
             RunThis.ExecuteThis(machines, scripts);
 
@@ -189,6 +190,11 @@ namespace agitator
         private void button11_Click(object sender, EventArgs e)
         {
             checkedListBox1.CheckAllItems();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

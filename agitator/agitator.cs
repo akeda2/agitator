@@ -98,6 +98,12 @@ namespace agitator
                 get { return pathToPsexec; }
                 set { pathToPsexec = value; }
             }
+            private int delay = 0;
+            public int Delay
+            {
+                get { return delay; }
+                set { delay = value; }
+            }
 
             public void ExecuteThisSelf(string[] machines, string[] args)
             {
@@ -137,6 +143,7 @@ namespace agitator
                         runObj.StartInfo.Arguments = "\\\\" + (string)machine + (string)arg;
                         
                         runObj.Start();
+                        System.Threading.Thread.Sleep(this.Delay);
                     }
                 }
             }
