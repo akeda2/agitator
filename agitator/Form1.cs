@@ -28,6 +28,10 @@ namespace agitator
             this.comboBox2.DataSource = agitator.FillCombo("users.txt");
 
             this.textBox1.Text = agitator.FillTextBoxFromTxtFile(@".\pathToPsT.txt");
+
+            this.checkedListBox1.AllowDrop = true;
+            this.checkedListBox1.DragEnter += checkedListBox1_DragEnter;
+            this.checkedListBox1.DragDrop += checkedListBox1_DragDrop;
         }
 
         
@@ -154,6 +158,22 @@ namespace agitator
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void checkedListBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
+                }
+        private void checkedListBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files)
+                //checkedListBox1.Items.Add(file);
+                checkedListBox1.Items.AddRange(agitator.FillCombo(file));
         }
     }
 }
