@@ -76,13 +76,13 @@ namespace agitator
         public static string[] FillComboFromDir(string path, string pattern)
         {
             string[] DirList = System.IO.Directory.GetFiles(path, pattern);
-            string[] brokenCombo = new string[DirList.Length];
+            List<string> brokenCombo = new List<string>(); //[DirList.Length];
 
             foreach (string dirListItem in DirList)
             {
-                brokenCombo = FillCombo(dirListItem);
+                brokenCombo.AddRange(FillCombo(dirListItem));
             }
-            return brokenCombo;
+            return brokenCombo.ToArray();
         }
         public static string[] FillComboFromDirBat(string path)
         {
