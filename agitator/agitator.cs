@@ -71,8 +71,19 @@ namespace agitator
         {
             string[] DirList = System.IO.Directory.GetFiles(path, @"*.*");
             return DirList;
+            
         }
+        public static string[] FillComboFromDir(string path, string pattern)
+        {
+            string[] DirList = System.IO.Directory.GetFiles(path, pattern);
+            string[] brokenCombo = new string[DirList.Length];
 
+            foreach (string dirListItem in DirList)
+            {
+                brokenCombo = FillCombo(dirListItem);
+            }
+            return brokenCombo;
+        }
         public static string[] FillComboFromDirBat(string path)
         {
             string[] DirList = System.IO.Directory.GetFiles(path, @"*.bat");

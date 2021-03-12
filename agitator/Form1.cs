@@ -24,6 +24,7 @@ namespace agitator
             //this.checkedListBox2.Items.AddRange(agitator.FillCombo("scripts.txt"));
 
             this.checkedListBox1.Items.AddRange(agitator.FillCombo("machines.txt"));
+            this.checkedListBox1.Items.AddRange(agitator.FillComboFromDir(".\\", "*.list"));
 
             this.comboBox2.DataSource = agitator.FillCombo("users.txt");
 
